@@ -1,0 +1,11 @@
+{
+  "name": "su-ke",
+  "version": "1.0.0",
+  "description": "full ecommerce site using mern",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Brook G\"",
+  "license": "ISC"
+}
