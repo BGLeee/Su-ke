@@ -1,6 +1,7 @@
 [
   {
     "name": "Wireless Headphones",
+    "id": "A1B2C3D4E5",
     "price": "99.99",
     "description": "High-quality wireless headphones with noise-canceling technology.",
     "ratings": 4.5,
@@ -30,6 +31,7 @@
   },
   {
     "name": "Leather Wallet",
+    "id": "F6G7H8I9J0",
     "price": "29.99",
     "description": "Premium leather wallet with multiple card slots and a sleek design.",
     "ratings": 4.2,
@@ -53,6 +55,7 @@
   },
   {
     "name": "Stainless Steel Water Bottle",
+    "id": "K1L2M3N4O5",
     "price": "15.99",
     "description": "Eco-friendly stainless steel water bottle with a 500ml capacity.",
     "ratings": 4.8,
@@ -75,6 +78,7 @@
   },
   {
     "name": "Electric Kettle",
+    "id": "P6Q7R8S9T0",
     "price": "39.99",
     "description": "Fast-boiling electric kettle with auto-shutoff and a 1.7L capacity.",
     "ratings": 4.6,
@@ -101,6 +105,7 @@
   },
   {
     "name": "Smartphone",
+    "id": "U1V2W3X4Y5",
     "price": "599.99",
     "description": "Latest smartphone with an OLED display, 128GB storage, and a powerful camera.",
     "ratings": 4.7,
