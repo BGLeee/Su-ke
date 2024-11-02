@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Wireless Headphones",
+    "price": "99.99",
+    "description": "High-quality wireless headphones with noise-canceling technology.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "headphones_01",
+        "url": "https://example.com/headphones_01.jpg"
+      },
+      {
+        "public_id": "headphones_02",
+        "url": "https://example.com/headphones_02.jpg"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "TechShop",
+    "stock": 25,
+    "numOfReviews": 5,
+    "reviews": [
+      { "name": "Alice", "rating": 5, "comment": "Amazing sound quality!" },
+      {
+        "name": "Bob",
+        "rating": 4,
+        "comment": "Very comfortable, but a bit pricey."
+      }
+    ],
+    "createdAt": "2021-06-20"
+  },
+  {
+    "name": "Leather Wallet",
+    "price": "29.99",
+    "description": "Premium leather wallet with multiple card slots and a sleek design.",
+    "ratings": 4.2,
+    "images": [
+      { "public_id": "wallet_01", "url": "https://example.com/wallet_01.jpg" },
+      { "public_id": "wallet_02", "url": "https://example.com/wallet_02.jpg" }
+    ],
+    "category": "Accessories",
+    "seller": "LeatherCraft",
+    "stock": 50,
+    "numOfReviews": 3,
+    "reviews": [
+      {
+        "name": "Charlie",
+        "rating": 4,
+        "comment": "Great quality but could be slimmer."
+      },
+      { "name": "Dana", "rating": 5, "comment": "Perfect for everyday use!" }
+    ],
+    "createdAt": "2021-06-20"
+  },
+  {
+    "name": "Stainless Steel Water Bottle",
+    "price": "15.99",
+    "description": "Eco-friendly stainless steel water bottle with a 500ml capacity.",
+    "ratings": 4.8,
+    "images": [
+      { "public_id": "bottle_01", "url": "https://example.com/bottle_01.jpg" }
+    ],
+    "category": "Outdoor",
+    "seller": "EcoWare",
+    "stock": 100,
+    "numOfReviews": 10,
+    "reviews": [
+      { "name": "Eve", "rating": 5, "comment": "Keeps water cold all day!" },
+      {
+        "name": "Frank",
+        "rating": 4,
+        "comment": "Good but wish it was a bit bigger."
+      }
+    ],
+    "createdAt": "2021-06-20"
+  },
+  {
+    "name": "Electric Kettle",
+    "price": "39.99",
+    "description": "Fast-boiling electric kettle with auto-shutoff and a 1.7L capacity.",
+    "ratings": 4.6,
+    "images": [
+      { "public_id": "kettle_01", "url": "https://example.com/kettle_01.jpg" }
+    ],
+    "category": "Kitchen",
+    "seller": "HomeAppliances",
+    "stock": 30,
+    "numOfReviews": 7,
+    "reviews": [
+      {
+        "name": "Gina",
+        "rating": 5,
+        "comment": "Boils quickly and is easy to use."
+      },
+      {
+        "name": "Harry",
+        "rating": 4,
+        "comment": "Solid product but a bit noisy."
+      }
+    ],
+    "createdAt": "2021-06-20"
+  },
+  {
+    "name": "Smartphone",
+    "price": "599.99",
+    "description": "Latest smartphone with an OLED display, 128GB storage, and a powerful camera.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "public_id": "smartphone_01",
+        "url": "https://example.com/smartphone_01.jpg"
+      }
+    ],
+    "category": "Mobile",
+    "seller": "SmartTech",
+    "stock": 15,
+    "numOfReviews": 12,
+    "reviews": [
+      { "name": "Irene", "rating": 5, "comment": "Best phone I’ve ever had!" },
+      {
+        "name": "Jake",
+        "rating": 4,
+        "comment": "Amazing features but a bit over priced."
+      }
+    ],
+    "createdAt": "2021-06-20"
+  }
+]
