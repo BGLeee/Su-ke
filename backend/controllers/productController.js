@@ -1,28 +1,29 @@
 const Product = require("../models/product");
 const mongoose = require("mongoose");
 const ErrorHandler = require("../utils/errorHandler");
+const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
+
 // Create new product => /api/v1/product/new
-try {
-  exports.newProduct = async (req, res, next) => {
+exports.newProduct = catchAsyncErrors(async (req, res, next) => {
+  try {
     const product = await Product.create(req.body);
 
     res.status(201).json({
       success: true,
       product,
     });
-  };
-} catch (error) {
-  console.error("Error creating product:", error);
-  res.status(500).json({
-    success: false,
-    message: "Failed to create product",
-    error: error.message,
-  });
-}
-
+  } catch (error) {
+    console.error("Error creating product:", error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to create product",
+      error: error.message,
+    });
+  }
+});
 //Get all Products => /api/v1/products
 
-exports.getProducts = async (req, res, next) => {
+exports.getProducts = catchAsyncErrors(async (req, res, next) => {
   const products = await Product.find();
 
   res.status(200).json({
@@ -30,11 +31,11 @@ exports.getProducts = async (req, res, next) => {
     count: products.length,
     products,
   });
-};
+});
 
 // Get single Product details => /api/v1/product/:id
 
-exports.getSingleProduct = async (req, res, next) => {
+exports.getSingleProduct = catchAsyncErrors(async (req, res, next) => {
   const productId = req.params.id;
 
   if (!mongoose.isValidObjectId(productId)) {
@@ -66,10 +67,10 @@ exports.getSingleProduct = async (req, res, next) => {
       error: error.message,
     });
   }
-};
+});
 
 // Update Product => /api/v1/admin/product/:id
-exports.updateProduct = async (req, res, next) => {
+exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
   const productId = req.params.id;
 
   if (!mongoose.isValidObjectId(productId)) {
@@ -82,10 +83,7 @@ exports.updateProduct = async (req, res, next) => {
     let product = await Product.findById(productId);
 
     if (!product) {
-      return res.status(404).json({
-        success: false,
-        message: "Product not found",
-      });
+      return next(new ErrorHandler("Product not found", 404));
     }
     product = await Product.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
@@ -104,10 +102,10 @@ exports.updateProduct = async (req, res, next) => {
       error: error.message,
     });
   }
-};
+});
 
 // Delete Product => /api/v1/admin/product/:id
-exports.deleteProduct = async (req, res, next) => {
+exports.deleteProduct = catchAsyncErrors(async (req, res, next) => {
   const productId = req.params.id;
 
   if (!mongoose.isValidObjectId(productId)) {
@@ -120,10 +118,7 @@ exports.deleteProduct = async (req, res, next) => {
     const product = await Product.findById(productId);
 
     if (!product) {
-      return res.status(404).json({
-        success: false,
-        message: "Product not found",
-      });
+      return next(new ErrorHandler("Product not found", 404));
     }
     await product.deleteOne({ _id: productId });
 
@@ -139,4 +134,4 @@ exports.deleteProduct = async (req, res, next) => {
       error: error.message,
     });
   }
-};
+});
