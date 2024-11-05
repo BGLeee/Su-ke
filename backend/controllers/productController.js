@@ -6,7 +6,7 @@ const APIFeatures = require("../utils/apiFeatures");
 const ApiFeatures = require("../utils/apiFeatures");
 const { response } = require("express");
 
-// Create new product => /api/v1/product/new
+// Create new product => /api/v1/admin/product/new
 exports.newProduct = catchAsyncErrors(async (req, res, next) => {
   try {
     const product = await Product.create(req.body);
